@@ -9,4 +9,9 @@ export class HomePage {
 
   constructor() {}
 
+  public usuario : any = {}
+
+  vaiFormulario(){
+    console.log(this.usuario);
+  }
 }
