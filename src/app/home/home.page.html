@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Meu App
+      Minha Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,18 +9,23 @@
 <ion-content [fullscreen]="true">
   <form (ngSubmit)="vaiFormulario()">
     <ion-item>
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text" name="nome" [(ngModel)]="usuario.nome"></ion-input>
+    <ion-label position="floating">Insira um número:</ion-label>
+    <ion-input type="number" name="numero1" [(ngModel)]="numero1"></ion-input>
     </ion-item>
 
     <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email" name="email" [(ngModel)]="usuario.email"></ion-input>
+    <ion-label position="floating">Insira outro número</ion-label>
+    <ion-input type="number" name="numero2" [(ngModel)]="numero2"></ion-input>
     </ion-item>
 
     <ion-item>
-    <ion-label position="floating">Telefone</ion-label>
-    <ion-input type="tel" name="telefone" [(ngModel)]="usuario.telefone"></ion-input>
+      <ion-label>Operações</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="operacao" name="operacao">
+        <ion-select-option value="add">Adição</ion-select-option>
+        <ion-select-option value="sub">Subtração</ion-select-option>
+        <ion-select-option value="mul">Multiplicação</ion-select-option>
+        <ion-select-option value="div">Divisão</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-button 
