@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-title>
+            Info Serie
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+        <ion-content [fullscreen]="true">
+
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>{{serie.nome}}</ion-card-title>
+                    <ion-card-subtitle>Data de Lançamento:{{serie.dataLancamento}}</ion-card-subtitle>
+                    <ion-card-subtitle>Temporadas: {{serie.temporadas}}</ion-card-subtitle>
+                  </ion-card-header>
+
+                  <ion-card-content>
+                    Lorem ipsum dolor sit amet 
+                    consectetur, adipisicing 
+                    elit. Accusamus magni quod 
+                    corporis architecto minima ad
+                    <br>
+                    <app-avaliacao nota="{{serie.nota}}"> </app-avaliacao>
+                  </ion-card-content>
+                  
+                </ion-card>
+
+        </ion-content>
+        

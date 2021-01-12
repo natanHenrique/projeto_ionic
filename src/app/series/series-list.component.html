@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Listar Series
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+    <ion-content [fullscreen]="true">
+        <ion-list>
+          <ion-item *ngFor="let serie of series">
+            <ion-label><h2>{{serie.nome}}</h2>
+              
+
+            <app-avaliacao nota="{{serie.nota}}"></app-avaliacao>
+<br>
+            <a [routerLink]="['series/info/', serie.id]">Visualizar</a>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+    </ion-content>
